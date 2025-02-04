@@ -2,7 +2,7 @@
 import random
 
 # Put all the functions into another file and import them
-import functions_lab05_solution
+import functions_week5
 
 # Game Flow
 # Define two Dice
