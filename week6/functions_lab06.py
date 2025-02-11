@@ -145,5 +145,15 @@ def save_game(winner,hero_name="",num_starts=0):
       elif(winner == "Monster"):
           file.write(f"Monster killed the {hero_name}\n")                                                           
 # Lab 06 - Question 5a
-
+def lead_game():
+    try:
+        with open("save.txt","r") as file:
+            print("   |   Loading from saved file ....")
+            lines = file.readline()
+            if lines:
+                last_line = lines.split("\n")[-1].strip()
+                print(last_line)
+                return last_line
+    except FileNotFoundError:
+        print("No saved game found. Try again later.")
 # Lab 06 - Question 5b
